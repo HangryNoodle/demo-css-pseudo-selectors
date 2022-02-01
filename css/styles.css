@@ -1,1 +1,53 @@
 /* developer styles go here */
+main {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+section {
+    padding: 3rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* :nth-child selector - selects elements based on their position as a child in any parent element */
+
+section:first-child {
+    background-color: crimson;
+}
+section:nth-child(2) {
+    background-color: red;
+}
+
+section:nth-child(3) {
+    background-color: orangered;
+}
+section:nth-child(4) {
+    background-color: orange;
+}
+/* this will be counting from the last child */
+section:nth-last-child(2) {
+    background-color: yellow;
+}
+section:last-child {
+    background-color: yellowgreen;
+}
+/* will only apply to the footer since the section in the footer only has one child */
+section:only-child {
+    background-color: green;
+}
+
+/* :nth-of-type() selectors - selects elements based on their position as a child as that TYPE of select*/
+p:first-of-type {
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+p:last-of-type {
+    font-size: 1rem;
+}
+
+p:nth-of-type(2) {
+    display: none;
+}
