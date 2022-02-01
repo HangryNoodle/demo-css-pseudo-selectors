@@ -7,6 +7,7 @@ main {
 
 section {
     padding: 3rem;
+    width: calc(100%/2);
     font-size: 2rem;
     text-align: center;
 }
@@ -50,4 +51,46 @@ p:last-of-type {
 
 p:nth-of-type(2) {
     display: none;
+}
+
+section:only-child {
+    background-color: whitesmoke;
+    color: darkslategray;
+    width: 100%;
+}
+
+p {
+    display: none;
+}
+
+@media screen and (min-width:950px) {
+    /* first, go */
+    section {
+        width: calc(100%/3);
+    }
+
+    /* secondly, change the order of the flex items in the layout. By default, every item has an order position of "0"*/
+    main section:last-child {
+        order: -5;
+    }
+
+    section:nth-child(4) {
+        order: -4;
+    }
+
+    section:nth-child(2) {
+        order: -3;
+    }
+    
+    section:nth-child(5) {
+        order: -2;
+    }
+    
+    section:nth-child(3) {
+        order: -1;
+    }
+
+    section:first-child {
+        order: 5;
+    }
 }
